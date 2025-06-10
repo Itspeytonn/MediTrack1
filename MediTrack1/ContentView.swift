@@ -30,9 +30,17 @@ struct ContentView: View {
                         .padding(.trailing, 10.0)
                     }
                     //end hstack
-                    Image("logo")
-                        .resizable(resizingMode: .stretch)
-                        .aspectRatio(contentMode: .fit)
+                    VStack {
+                        Image("logo")
+                            .resizable(resizingMode: .stretch)
+                            .aspectRatio(contentMode: .fit)
+                    }
+                    .padding(.all, 25.0)
+                    //end vstack
+                    .background(Color("lightBlue"))
+                    
+                    Spacer().frame(height: 25)
+
                     
                     NavigationLink(destination: MedicationLog()) {
                         Text("Medication Log 📈")
@@ -43,6 +51,8 @@ struct ContentView: View {
                     }
                     //ends nav link
                     
+                    Spacer().frame(height: 25)
+
                     NavigationLink(destination: MedicationInfo()) {
                         Text("Medication Information!")
                             .padding()
@@ -51,10 +61,18 @@ struct ContentView: View {
                             .cornerRadius(8)
                     }
                     
-                    //ends nav link
-                    Spacer()
+                    Spacer().frame(height: 25)
 
+                    NavigationLink(destination: Affirmations()) {
+                        Text("🤍 Affirmations! 🤍")
+                            .padding()
+                            .background(Color("lightPink"))
+                            .foregroundColor(.white)
+                            .cornerRadius(8)
+                    }
+                    //ends nav link
                     
+                    Spacer()
 
                 }
                 //end vstack
