@@ -37,7 +37,7 @@ struct ContentView: View {
                     NavigationLink(destination: MedicationLog()) {
                         Text("Medication Log 📈")
                             .padding()
-                            .background(.red)
+                            .background(Color("lightPink"))
                             .foregroundColor(.white)
                             .cornerRadius(8)
                     }
@@ -46,7 +46,7 @@ struct ContentView: View {
                     NavigationLink(destination: MedicationInfo()) {
                         Text("Medication Information!")
                             .padding()
-                            .background(Color.green)
+                            .background(Color("lightPink"))
                             .foregroundColor(.white)
                             .cornerRadius(8)
                     }
