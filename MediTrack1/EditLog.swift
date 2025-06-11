@@ -12,11 +12,23 @@ struct EditLog: View {
       _newLogDate = State(initialValue: log.logDate)
   }
   var body: some View {
-    Text("Hello World")
+    Text("")
     Form { // new
-      TextField("Name", text: $newMedicationName) // new
-      DatePicker("Log Date", selection: $newLogDate, displayedComponents: .date) // new
+        VStack(alignment: .leading, spacing: 8) {
+            TextField("Name", text: $newMedicationName)
+                .padding(8)
+                .background(Color.white)
+                .cornerRadius(8)
+            DatePicker("Log Date", selection: $newLogDate, displayedComponents: .date)
+                .padding(8)
+                .background(Color.white)
+                .cornerRadius(8)
+        }
+        //end vstack
+        .listRowBackground(Color("lightPink"))
     }
+    .background(Color.green)
+
     // end form
     .navigationTitle("Edit Log")
     .navigationBarTitleDisplayMode(.inline)
@@ -25,7 +37,9 @@ struct EditLog: View {
         Button("Cancel") {
           dismiss()
         }
+        .foregroundColor(.red)
       }
+      //.background(Color("darkPink"))
       ToolbarItem(placement: .confirmationAction) {
         Button("Save") { // new
             log.medicationName = newMedicationName
@@ -34,7 +48,8 @@ struct EditLog: View {
         }
         //end save button
       }//end action
-    }//end toolbar
+    }
+    //end toolbar
   }
   // end body
 }
