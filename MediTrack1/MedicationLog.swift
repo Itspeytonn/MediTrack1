@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MedicationLog: View {
     var body: some View {
-       
+        
 
     }
 }
