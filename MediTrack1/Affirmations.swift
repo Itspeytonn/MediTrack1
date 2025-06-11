@@ -43,6 +43,8 @@ struct Affirmations: View {
                 Spacer().frame(height:210)
             }
             //end VStack
+            .navigationTitle("Affirmations")
+            .navigationBarTitleDisplayMode(.inline)
             .padding(.horizontal, 15)
         }//ZStack
                 
