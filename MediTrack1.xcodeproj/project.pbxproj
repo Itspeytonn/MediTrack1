@@ -6,13 +6,8 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		BDE4CFFC2DF9DA2100EC5B83 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE4CFFB2DF9DA2100EC5B83 /* Log.swift */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
 		BDE4CE912DF8820400EC5B83 /* MediTrack1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediTrack1.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BDE4CFFB2DF9DA2100EC5B83 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -37,7 +32,6 @@
 		BDE4CE882DF8820400EC5B83 = {
 			isa = PBXGroup;
 			children = (
-				BDE4CFFB2DF9DA2100EC5B83 /* Log.swift */,
 				BDE4CE932DF8820400EC5B83 /* MediTrack1 */,
 				BDE4CE922DF8820400EC5B83 /* Products */,
 			);
@@ -125,7 +119,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDE4CFFC2DF9DA2100EC5B83 /* Log.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
