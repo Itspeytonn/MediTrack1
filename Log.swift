@@ -12,7 +12,6 @@ import SwiftData
 class Log {
     var medicationName: String
     var logDate: Date
-    
     init(medicationName: String, logDate: Date) {
         self.medicationName = medicationName
         self.logDate = logDate
