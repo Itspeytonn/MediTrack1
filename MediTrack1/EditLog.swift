@@ -12,7 +12,7 @@ struct EditLog: View {
       _newLogDate = State(initialValue: log.logDate)
   }
   var body: some View {
-    Text("")
+      Text("")
     Form { // new
         VStack(alignment: .leading, spacing: 8) {
             TextField("Name", text: $newMedicationName)
