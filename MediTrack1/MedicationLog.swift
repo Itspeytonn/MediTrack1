@@ -1,3 +1,4 @@
+
 import SwiftUI
 import SwiftData
 struct MedicationLog: View {
@@ -56,7 +57,6 @@ struct MedicationLog: View {
     //end nav stack
   }
   //end body view
-    
     func deleteLog(at offsets: IndexSet) {
         for index in offsets {
             let log = logs[index]
@@ -69,13 +69,3 @@ struct MedicationLog: View {
   MedicationLog()
     .modelContainer(for:Log.self, inMemory: true)
 }
-
-
-
-
-
-
-
-
-
-
