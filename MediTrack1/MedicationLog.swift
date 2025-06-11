@@ -12,9 +12,9 @@ struct MedicationLog: View {
       List {
         ForEach(logs) { log in
           HStack {
-              Text(log.name)
+              Text(log.medicationName)
               Spacer()
-              Text(log.newLogDate, format: .dateTime.month(.wide).day().year())
+              Text(log.logDate, format: .dateTime.month(.wide).day().year())
             }
             //end hstack
           .onTapGesture {
@@ -27,7 +27,7 @@ struct MedicationLog: View {
       .navigationTitle("Medicine")
       .sheet(item: $selectedLog) { log in
         NavigationStack {
-          EditLog(log: Log)
+          EditLog(log: log)
         }
       }
       .safeAreaInset(edge: .bottom) {
@@ -39,7 +39,7 @@ struct MedicationLog: View {
                   .textFieldStyle(.roundedBorder)
               }
           Button("Log") {
-            let newLog = Log(name: newMedicationName, birthday: newLogDate)
+            let newLog = Log(medicationName: newMedicationName, logDate: newLogDate)
             context.insert(newLog)
             newMedicationName = ""
             newLogDate = .now
@@ -56,6 +56,13 @@ struct MedicationLog: View {
     //end nav stack
   }
   //end body view
+    
+    func deleteLog(at offsets: IndexSet) {
+        for index in offsets {
+            let log = logs[index]
+            context.delete(log)
+        }
+    }
 }
 //end content
 #Preview {
@@ -63,17 +70,6 @@ struct MedicationLog: View {
     .modelContainer(for:Log.self, inMemory: true)
 }
 
-
-
-
-
-
-
-
-
-
-
-Message group2_1-7
 
 
 
