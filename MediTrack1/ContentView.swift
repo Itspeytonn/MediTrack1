@@ -26,7 +26,7 @@ struct ContentView: View {
                                 
 
                             Text("streak #")
-                        }
+                            .font(.custom("Verdana-bold", size: 18))                        }
                         //end vstack
                         .padding(.trailing, 10.0)
                     }
@@ -45,7 +45,7 @@ struct ContentView: View {
                     
                     NavigationLink(destination: MedicationLog()) {
                         Text("Medication Log 📈")
-                            .padding()
+                            .font(.custom("Verdana-bold", size: 18))                            .padding()
                             .background(Color("lightPink"))
                             .foregroundColor(.white)
                             .cornerRadius(8)
@@ -56,7 +56,7 @@ struct ContentView: View {
 
                     NavigationLink(destination: MedicationInfo()) {
                         Text("Medication Information!")
-                            .padding()
+                            .font(.custom("Verdana-bold", size: 18))                            .padding()
                             .background(Color("lightPink"))
                             .foregroundColor(.white)
                             .cornerRadius(8)
@@ -66,7 +66,7 @@ struct ContentView: View {
 
                     NavigationLink(destination: Affirmations()) {
                         Text("🤍 Affirmations! 🤍")
-                            .padding()
+                            .font(.custom("Verdana-bold", size: 18))                            .padding()
                             .background(Color("lightPink"))
                             .foregroundColor(.white)
                             .cornerRadius(8)

@@ -14,7 +14,6 @@ struct MedicationLog: View {
         ForEach(logs) { log in
           HStack {
               Text(log.medicationName)
-              Spacer()
               Text(log.logDate, format: .dateTime.month(.wide).day().year())
             }
             //end hstack
@@ -29,22 +28,22 @@ struct MedicationLog: View {
       .sheet(item: $selectedLog) { log in
         NavigationStack {
           EditLog(log: log)
-        }
+               }
       }
       .safeAreaInset(edge: .bottom) {
         VStack(alignment: .center, spacing: 20) {
             Text("Log New Medication")
-              .font(.headline)
+                .font(.custom("Verdana", size: 18))
           DatePicker(selection: $newLogDate, in: Date.distantPast...Date.now, displayedComponents: .date) {
                 TextField("Name", text: $newMedicationName)
                   .textFieldStyle(.roundedBorder)
               }
-          Button("Log") {
-            let newLog = Log(medicationName: newMedicationName, logDate: newLogDate)
-            context.insert(newLog)
-            newMedicationName = ""
-            newLogDate = .now
-          }
+            Button("Log") {
+                let newLog = Log(medicationName: newMedicationName, logDate: newLogDate)
+                context.insert(newLog)
+                newMedicationName = ""
+                newLogDate = .now
+            }
           //end button
           .bold()
         }

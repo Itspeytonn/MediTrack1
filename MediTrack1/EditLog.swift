@@ -12,7 +12,7 @@ struct EditLog: View {
       _newLogDate = State(initialValue: log.logDate)
   }
   var body: some View {
-    Text("Hello World")
+      Text("")
     Form { // new
       TextField("Name", text: $newMedicationName) // new
       DatePicker("Log Date", selection: $newLogDate, displayedComponents: .date) // new

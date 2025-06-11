@@ -17,7 +17,7 @@ struct MedicationInfo: View {
                 gradient: Gradient(stops: [
                     .init(color: Color.lightBlue, location: 0.0),
                     .init(color: Color.lightBlue, location: 0.3),
-                    .init(color: Color.blue, location: 1.0)
+                    .init(color: Color.theme, location: 1.0)
                 ]),
                 startPoint: .top,
                 endPoint: .bottom
